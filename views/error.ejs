@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: '¡Houston! We have a problem'}) %>
+
+<body>
+	<!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+
+	<!-- Error page -->
+	<div class="container">
+		<div class="error">
+			<p><i class="fas fa-exclamation-triangle"></i></p>
+			<p><%= error.status %></p>
+			<span>Error trying to access to: <b><%= path %></b></span>
+			<!--<pre><i><%= error.stack %></i></pre>-->
+		</div>
+	</div>
+	<!-- /Error page -->
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>
+
+</html>
